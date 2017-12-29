@@ -5,5 +5,6 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
 <?php
-include './estructura/home.php';
+$insertGoTo ="../index.php";
+header(sprintf("Location: %s", $insertGoTo));
 ?>
