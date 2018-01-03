@@ -4,7 +4,7 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
-<?php $nombreUsuario = ""; ?>
+<?php $nombreUsuario = "Cristian"; ?>
 
 <nav class="navbar  w3-proshare-a navbar-fixed-top">
     
@@ -15,7 +15,7 @@ and open the template in the editor.
                 <span class="w3-proshare-n icon-bar"></span>
                 <span class="w3-proshare-n icon-bar"></span>                        
             </button>
-            <a class=" w3-text-proshare-n" href="#">
+            <a class=" w3-text-proshare-n" href="index.php">
                 <div class="w3-xxlarge ">
                     <!--<i class="fa fa-home"></i>--> 
                     <img class="w3-padding" src="imagenes/ProShare_Naranja_800x180.png"  style="height:30%;width:30%" alt="Avatar">
@@ -49,7 +49,7 @@ and open the template in the editor.
                 if ($nombreUsuario == "") {
                     echo '<li><a onclick="openModalLogin()"><span class="glyphicon glyphicon-user"></span></a></li>';
                 } else {
-                    echo '<li><a href="#">Hola, ' . $nombreUsuario . ' <span class="glyphicon glyphicon-user"></span></a></li>';
+                    echo '<li><a href="./perfil.php">Hola, ' . $nombreUsuario . ' <span class="glyphicon glyphicon-user"></span></a></li>';
                 }
                 ?>
             </ul>

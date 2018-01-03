@@ -25,7 +25,7 @@ and open the template in the editor.
         include_once './estructura/header.php';
         include_once './estructura/modalLogin.php';
         ?>
-        <div class="w3-container" style="margin-top: 20px">
+        <div class="w3-container w3-mobile" style="margin-top: 20px">
             <?php
             include_once './estructura/carrousel.php';
             ?>
