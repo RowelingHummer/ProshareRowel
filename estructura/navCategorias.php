@@ -4,7 +4,7 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
-<div class="container w3-display-container w3-hide-small w3-hide-medium" id="navCategorias" >
+<div class="w3-display-container w3-hide-small w3-hide-medium" id="navCategorias" >
     <div class=" w3-bar w3-proshare-a scrollmenu" id="scrollmenu" >
     </div>
 </div>

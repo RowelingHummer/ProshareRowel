@@ -1,46 +1,41 @@
 <?php
-
-/* 
+/*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
+class acordion {
+
+    public $id;
+    public $nombre;
+    public $contenidoAcordion = array();
+
+    public function __construct($id, $nombre, $contenidoAcordion) {
+        $this->id = $id;
+        $this->nombre = $nombre;
+        $this->contenidoAcordion = $contenidoAcordion;
+    }
+
+    public function generarAcordion() {
+        echo '<div class="w3-card w3-round">';
+        echo '<div class="w3-white">';
+        echo '<button onclick="myFunction('."'" . $this->id . "'".')" class="w3-button w3-block w3-theme-l1 w3-left-align">';
+        echo '<i class="fa fa-circle-o-notch fa-fw w3-margin-right"></i>' . $this->nombre . '</button>';
+        echo '<div id="' . $this->id . '" class="w3-hide w3-container">';
+        echo $this->contenidoAcordion();
+        echo '</div>';
+        echo '</div>';
+        echo '</div>';
+    }
+
+    private function contenidoAcordion() {
+        for ($i = 0; $i < sizeof($this->contenidoAcordion); $i++) {
+            echo '<a href="' . $this->contenidoAcordion[$i][1] . '" class="w3-button w3-block w3-left-align">' . $this->contenidoAcordion[$i][0] . '</a>';
+        }
+    }
+
+}
 ?>
-      <div class="w3-card w3-round">
-        <div class="w3-white">
-          <button onclick="myFunction('Demo1')" class="w3-button w3-block w3-theme-l1 w3-left-align"><i class="fa fa-circle-o-notch fa-fw w3-margin-right"></i> My Groups</button>
-          <div id="Demo1" class="w3-hide w3-container">
-            <p>Some text..</p>
-          </div>
-          <button onclick="myFunction('Demo2')" class="w3-button w3-block w3-theme-l1 w3-left-align"><i class="fa fa-calendar-check-o fa-fw w3-margin-right"></i> My Events</button>
-          <div id="Demo2" class="w3-hide w3-container">
-            <p>Some other text..</p>
-          </div>
-          <button onclick="myFunction('Demo3')" class="w3-button w3-block w3-theme-l1 w3-left-align"><i class="fa fa-users fa-fw w3-margin-right"></i> My Photos</button>
-          <div id="Demo3" class="w3-hide w3-container">
-         <div class="w3-row-padding">
-         <br>
-           <div class="w3-half">
-             <img src="/w3images/lights.jpg" style="width:100%" class="w3-margin-bottom">
-           </div>
-           <div class="w3-half">
-             <img src="/w3images/nature.jpg" style="width:100%" class="w3-margin-bottom">
-           </div>
-           <div class="w3-half">
-             <img src="/w3images/mountains.jpg" style="width:100%" class="w3-margin-bottom">
-           </div>
-           <div class="w3-half">
-             <img src="/w3images/forest.jpg" style="width:100%" class="w3-margin-bottom">
-           </div>
-           <div class="w3-half">
-             <img src="/w3images/nature.jpg" style="width:100%" class="w3-margin-bottom">
-           </div>
-           <div class="w3-half">
-             <img src="/w3images/fjords.jpg" style="width:100%" class="w3-margin-bottom">
-           </div>
-         </div>
-          </div>
-        </div>      
-      </div>
-      <br>
-      
+
+

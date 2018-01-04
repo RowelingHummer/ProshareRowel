@@ -31,7 +31,7 @@ and open the template in the editor.
     <!-- Left Column -->
     <div class="w3-col m3">
                 <?php include_once './clases/perfilCard.php'; ?>
-                <?php include_once './clases/acordion.php'; ?>
+                <?php include_once './estructura/acordion.php'; ?>
     </div>
     <div class="w3-col m6">
                 <?php include_once './clases/categoriasReservadas.php'; ?>

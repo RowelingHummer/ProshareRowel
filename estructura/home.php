@@ -23,15 +23,19 @@ and open the template in the editor.
     <body class="w3-padding-32" onload="armarNavCategorias()">
         <?php
         include_once './estructura/header.php';
+        include_once './estructura/navInferiorMobile.php';
         include_once './estructura/modalLogin.php';
         ?>
-        <div class="w3-container w3-mobile" style="margin-top: 20px">
+        <div class="carrusel" style="margin-top: 20px">
             <?php
             include_once './estructura/carrousel.php';
             ?>
+ 
+        </div>
+        <div class="w3-container container">
             <?php
             include_once './estructura/navCategorias.php';
-            ?>  
+            ?>             
         </div>
         
             <?php

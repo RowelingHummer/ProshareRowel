@@ -80,7 +80,7 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
 .w3-responsive{display:block;overflow-x:auto}
 .w3-container:after,.w3-container:before,.w3-panel:after,.w3-panel:before,.w3-row:after,.w3-row:before,.w3-row-padding:after,.w3-row-padding:before,
 .w3-cell-row:before,.w3-cell-row:after,.w3-clear:after,.w3-clear:before,.w3-bar:before,.w3-bar:after{content:"";display:table;clear:both}
-.w3-col,.w3-half,.w3-third,.w3-twothird,.w3-threequarter,.w3-quarter{float:left;width:100%}
+.w3-col,.w3-half,.w3-third,.w3-twothird,.w3-threequarter,.w3-quarter,.w3-fifth {float:left;width:100%}
 .w3-col.s1{width:8.33333%}.w3-col.s2{width:16.66666%}.w3-col.s3{width:24.99999%}.w3-col.s4{width:33.33333%}
 .w3-col.s5{width:41.66666%}.w3-col.s6{width:49.99999%}.w3-col.s7{width:58.33333%}.w3-col.s8{width:66.66666%}
 .w3-col.s9{width:74.99999%}.w3-col.s10{width:83.33333%}.w3-col.s11{width:91.66666%}.w3-col.s12{width:99.99999%}
@@ -293,143 +293,47 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
 .w3-hover-border-proshare-n:hover {border-color:#ff643c !important}
 
 
-.carousel-inner > .item > img,
-.carousel-inner > .item > a > img {
-  width: 100%;
-  height: 500px;
-  margin: auto;
-}
+.carousel-inner > .item > img,.carousel-inner > .item > a > img {width: 100%;height: 60px;margin: auto;}
+.carrusel{width:100%;margin-right:auto;margin-left:auto}
+/* Hide the carousel text when the screen is less than 600 pixels wide */
+@media (max-width: 600px) {.carousel-caption {display: none;}}
+
+@media (max-width:768px){.carrusel{max-width:576px} .carousel-inner > .item > img,.carousel-inner > .item > a > img {width: 100%;height: 200px;margin: auto;}}
+@media (min-width:768px){.carrusel{max-width:720px} .carousel-inner > .item > img,.carousel-inner > .item > a > img {width: 100%;height: 250px;margin: auto;}}
+@media (min-width:992px){.carrusel{max-width:960px} .carousel-inner > .item > img,.carousel-inner > .item > a > img {width: 100%;height: 300px;margin: auto;}}
+@media (min-width:1200px){.carrusel{max-width:1140px} .carousel-inner > .item > img,.carousel-inner > .item > a > img {width: 100%;height: 350px;margin: auto;}}
 
 .w3-facebook {color:#fff !important; background-color:#3b5998 !important}
-
+.w3-fifth{width: 20%}
 div.scrollmenu {
     background-color: #333;
     overflow: hidden;
     white-space: nowrap;
 }
-
-div.scrollmenu a {
-    display: inline-block;
-    text-align: center;
-    padding: 14px;
-    text-decoration: none;
-}
+.icono-proshare{height:45px;width:200px}
+@media (max-width:768px){.icono-proshare{height:27px;width:120px}}
+div.scrollmenu a {display: inline-block;text-align: center;padding: 14px;text-decoration: none;}
 /*estilos para iconos de RRSS*/
-.f {
-  padding: 20px;
-  font-size: 30px;
-  width: 50px;
-  text-align: center;
-  text-decoration: none;
-  margin: 5px 2px;
-}
-
-.f:hover {
-    opacity: 0.7;
-}
-
-.fa-facebook {
-  background: #3B5998;
-  color: white;
-}
-
-.fa-twitter {
-  background: #55ACEE;
-  color: white;
-}
-
-.fa-google {
-  background: #dd4b39;
-  color: white;
-}
-
-.fa-linkedin {
-  background: #007bb5;
-  color: white;
-}
-
-.fa-youtube {
-  background: #bb0000;
-  color: white;
-}
-
-.fa-instagram {
-  background: #125688;
-  color: white;
-}
-
-.fa-pinterest {
-  background: #cb2027;
-  color: white;
-}
-
-.fa-snapchat-ghost {
-  background: #fffc00;
-  color: white;
-  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-}
-
-.fa-skype {
-  background: #00aff0;
-  color: white;
-}
-
-.fa-android {
-  background: #a4c639;
-  color: white;
-}
-
-.fa-dribbble {
-  background: #ea4c89;
-  color: white;
-}
-
-.fa-vimeo {
-  background: #45bbff;
-  color: white;
-}
-
-.fa-tumblr {
-  background: #2c4762;
-  color: white;
-}
-
-.fa-vine {
-  background: #00b489;
-  color: white;
-}
-
-.fa-foursquare {
-  background: #45bbff;
-  color: white;
-}
-
-.fa-stumbleupon {
-  background: #eb4924;
-  color: white;
-}
-
-.fa-flickr {
-  background: #f40083;
-  color: white;
-}
-
-.fa-yahoo {
-  background: #430297;
-  color: white;
-}
-
-.fa-soundcloud {
-  background: #ff5500;
-  color: white;
-}
-
-.fa-reddit {
-  background: #ff5700;
-  color: white;
-}
-
-.fa-rss {
-  background: #ff6600;
-  color: white;
-}
+.f {padding: 20px;font-size: 30px;width: 70px;text-align: center;text-decoration: none;margin: 5px 2px;}
+.f:hover {opacity: 0.7;}
+.fa-facebook {background: #3B5998;color: white;}
+.fa-twitter {background: #55ACEE;color: white;}
+.fa-google {background: #dd4b39;color: white;}
+.fa-linkedin {background: #007bb5;color: white;}
+.fa-youtube {background: #bb0000;color: white;}
+.fa-instagram {background: #125688;color: white;}
+.fa-pinterest {background: #cb2027;color: white;}
+.fa-snapchat-ghost {background: #fffc00;color: white;text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;}
+.fa-skype {background: #00aff0;color: white;}
+.fa-android {background: #a4c639;color: white;}
+.fa-dribbble {background: #ea4c89;color: white;}
+.fa-vimeo {background: #45bbff;color: white;}
+.fa-tumblr {background: #2c4762;color: white;}
+.fa-vine {background: #00b489;color: white;}
+.fa-foursquare {background: #45bbff;color: white;}
+.fa-stumbleupon {background: #eb4924;color: white;}
+.fa-flickr {background: #f40083;color: white;}
+.fa-yahoo {background: #430297;color: white;}
+.fa-soundcloud {background: #ff5500;color: white;}
+.fa-reddit {background: #ff5700;color: white;}
+.fa-rss {background: #ff6600;color: white;}

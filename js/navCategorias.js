@@ -31,13 +31,13 @@ var $currImage = $('#st_main').children('img:first');
 
 
 
-function buildThumbs() {
+function buildThumbs($thumbs_wrapper,$thumbs,w1,w2) {
     console.log("estoy en buildThumbs");
 
-    var $thumbs_wrapper = $('#navCategorias');
-    var $thumbs = $('#scrollmenu');
-    var w1 = $thumbs_wrapper.innerWidth();
-    var w2 = $thumbs.innerWidth();
+//    var $thumbs_wrapper = $('#navCategorias');
+//    var $thumbs = $('#scrollmenu');
+//    var w1 = $thumbs_wrapper.innerWidth();
+//    var w2 = $thumbs.innerWidth();
     console.log("w1:" + w1 + " w2:" + w2);
     var finalW = $thumbs.find('a').length * 120.5;
     $thumbs.css('width', finalW + 'px');
@@ -67,30 +67,7 @@ function makeScrollable($outer, $inner) {
         $outer.scrollLeft(left);
     });
 }
-function scrollRight() {
-    var a = document.getElementById("scrollmenu");
-    a.scrollBy(100, 0);
-}
-function scrollleft() {
-    var a = document.getElementById("scrollmenu");
-    a.scrollBy(-100, 0);
-}
 function armarNavCategorias() {
-    var h1 = $('.holo1').height();
-    var h2 = $('.holo2').height();
-    console.log("h1:" + h1 + " h2:" + h2);
-    if (h1>h2){
-        $('holo2').css('height',h1+'px');
-        var h3 = $('.holo1').height();
-        var h4 = $('.holo2').height();
-        console.log("h3:" + h3 + " h4:" + h4);
-    }else{
-        $('holo1').css('height',h2+'px');
-        var h5 = $('.holo1').height();
-        var h6 = $('.holo2').height();
-        console.log("h5:" + h5 + " h6:" + h6);
-        
-    }
     var contenidoWeb = '.scrollmenu';
     var contenidoMobile = '.mobileMenu';
     $(contenidoWeb).empty();
@@ -106,7 +83,7 @@ function armarNavCategorias() {
     var w1 = $thumbs_wrapper.innerWidth();
     var w2 = $thumbs.innerWidth();
     console.log("w1:" + w1 + " w2:" + w2);
-    buildThumbs();
+    buildThumbs($thumbs_wrapper,$thumbs,w1,w2);
 }
 function buscarCategorias() {
     var input, filter, mobileMenu, categorias, a, i;
