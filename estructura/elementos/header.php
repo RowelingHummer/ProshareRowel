@@ -37,10 +37,10 @@ and open the template in the editor.
                         </div>
                     </form>
                 </li>
-                <li class="active"><a class="w3-hover-proshare-n w3-text-proshare-n" href="#"><i class="fa fa-calendar"></i><p class="w3-hide-large w3-hide-small"> Agenda</p> </a></li>
-                <li class="active"><a class="w3-hover-proshare-n w3-text-proshare-n" href="#"><i class="fa fa-heart"></i><p class="w3-hide-large w3-hide-small"> Favoritos</p> </a></li>
-                <li class="active"><a class="w3-hover-proshare-n w3-text-proshare-n" href="#"><i class="material-icons">shopping_cart</i><p class="w3-hide-large w3-hide-small"> Carrito</p> </a></li>
-                <li class="active"><a class="w3-hover-proshare-n w3-text-proshare-n" href="#"><i class="fa fa-ticket"></i><p class="w3-hide-large w3-hide-small"> Promociones</p> </a></li>
+                <li class="active"><a class="w3-hover-proshare-n w3-text-proshare-n" href="#"><i class="fa fa-calendar"></i> </a></li>
+                <li class="active"><a class="w3-hover-proshare-n w3-text-proshare-n" href="#"><i class="fa fa-heart"></i> </a></li>
+                <li class="active"><a class="w3-hover-proshare-n w3-text-proshare-n" href="#"><i class="material-icons">shopping_cart</i> </a></li>
+                <li class="active"><a class="w3-hover-proshare-n w3-text-proshare-n" href="#"><i class="fa fa-ticket"></i> </a></li>
             </ul>
         </div>
         <div class="w3-col l2 m2 w3-center w3-hover-proshare-n w3-text-proshare-n w3-padding">

@@ -16,49 +16,49 @@ and open the template in the editor.
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="css/stylesWEB.css">
         <script src="js/header.js"></script>
-        <script src="js/modalLogin.js"></script>
+        <script src="js/modals.js"></script>
         <script src="js/navCategorias.js"></script>
 
     </head>
     <body class="w3-padding-32" onload="armarNavCategorias()">
         <?php
-        include_once './estructura/header.php';
-        include_once './estructura/navInferiorMobile.php';
-        include_once './estructura/modalLogin.php';
+        include_once './estructura/elementos/header.php';
+        include_once './estructura/elementos/navInferiorMobile.php';
+        include_once './estructura/elementos/modalLogin.php';
         ?>
         <div class="carrusel" style="margin-top: 20px">
             <?php
-            include_once './estructura/carrousel.php';
+            include_once './estructura/elementos/carrousel.php';
             ?>
  
         </div>
         <div class="w3-container container">
             <?php
-            include_once './estructura/navCategorias.php';
+            include_once './estructura/elementos/navCategorias.php';
             ?>             
         </div>
         
             <?php
-            include_once './estructura/navCategoriasMobile.php';
+            include_once './estructura/elementos/navCategoriasMobile.php';
             ?>  
        
         <div class='container w3-text-proshare-n w3-padding-16'><h1><strong>Promociones</strong></h1></div>
         <div>
             <?php
-            include_once './estructura/promociones.php';
+            include_once './estructura/elementos/promociones.php';
             ?>         
         </div>
         <div>
             <?php
-            include_once './estructura/jumbotron2.php';
+            include_once './estructura/elementos/jumbotron2.php';
             ?>         
         </div>
         <div>
             <?php
-            include_once './estructura/navCategorias.php';
+            include_once './estructura/elementos/navCategorias.php';
             ?>         
         </div>
-        <div>
+        <div class="container">
             <h1> santiago quiere que proshare lo saque de pobre </h1>
             <h5>some text...</h5>
             <h5>some text...</h5>
@@ -67,25 +67,7 @@ and open the template in the editor.
             <h5>some text...</h5>
             <h5>some text...</h5>
             <h5>some text...</h5>
-            <h5>some text...</h5>
-            <h5>some text...</h5>
-            <h5>some text...</h5>
-            <h5>some text...</h5>
-            <h5>some text...</h5>
-            <h5>some text...</h5>
-            <h5>some text...</h5>
-            <h5>some text...</h5>
-            <h5>some text...</h5>
-            <h5>some text...</h5>
-            <h5>some text...</h5>
-            <h5>some text...</h5>
-            <h5>some text...</h5>
-            <h5>some text...</h5>
-            <h5>some text...</h5>
-            <h5>some text...</h5>
-            <h5>some text...</h5>
-            <h5>some text...</h5>
-            <h5>some text...</h5>
+
         </div>
         <?php include_once './estructura/footer.php'; ?>
         <script>

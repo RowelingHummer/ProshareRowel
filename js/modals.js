@@ -3,6 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+function openModal(id){
+    console.log(id);
+}
 function openModalLogin(){
     document.getElementById('modalLogin').style.display='block';
     document.getElementById('formLogin').style.display='block';
@@ -27,3 +30,4 @@ var modal = document.getElementById('modalLogin');
         modal.style.display = "none";
     }
 }
+

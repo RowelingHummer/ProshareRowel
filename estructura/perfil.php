@@ -16,33 +16,33 @@ and open the template in the editor.
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="./css/stylesWEB.css">
         <script src="./js/header.js"></script>
-        <script src="./js/modalLogin.js"></script>
+        <script src="./js/modals.js"></script>
         <script src="./js/navCategorias.js"></script>
 
     </head>
     <body class="w3-padding-32" onload="armarNavCategorias()">
         <?php
-        include_once './estructura/header.php';
-        include_once './estructura/modalLogin.php';
+        include_once './estructura/elementos/header.php';
+        include_once './estructura/elementos/modalLogin.php';
         ?>
 <div class="w3-container w3-content" style="max-width:1400px;margin-top:80px">    
   <!-- The Grid -->
   <div class="w3-row">
     <!-- Left Column -->
-    <div class="w3-col m3">
-                <?php include_once './clases/perfilCard.php'; ?>
-                <?php include_once './estructura/acordion.php'; ?>
+    <div class="w3-col l3 m4 s12">
+                <?php include_once './estructura/elementos/perfilCard.php'; ?>
+                <?php include_once './estructura/elementos/acordion.php'; ?>
     </div>
-    <div class="w3-col m6">
-                <?php include_once './clases/categoriasReservadas.php'; ?>
+    <div class="w3-col l6 m8 s12">
+                <?php include_once './estructura/elementos/ajustesGenerales.php'; ?>
     </div>
-    <div class="w3-col m3">
+    <div class="w3-col l3 m12 s12">
                 <?php include_once './clases/proximasReservas.php'; ?>
-                <?php include_once './estructura/carrousel.php'; ?>
+                <?php include_once './estructura/elementos/carrousel.php'; ?>
     </div>
   </div>
 </div>
-        <?php include_once './estructura/footer.php'; ?>
+        <?php include_once './estructura/elementos/footer.php'; ?>
    
     </body>
 </html>

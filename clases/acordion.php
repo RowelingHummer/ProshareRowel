@@ -18,11 +18,11 @@ class acordion {
     }
 
     public function generarAcordion() {
-        echo '<div class="w3-card w3-round">';
-        echo '<div class="w3-white">';
+        echo '<div class="w3-card w3-round w3-hover-light-grey">';
+        echo '<div class="w3-white w3-dropdown-full w3-dropdown-click">';
         echo '<button onclick="myFunction('."'" . $this->id . "'".')" class="w3-button w3-block w3-theme-l1 w3-left-align">';
         echo '<i class="fa fa-circle-o-notch fa-fw w3-margin-right"></i>' . $this->nombre . '</button>';
-        echo '<div id="' . $this->id . '" class="w3-hide w3-container">';
+        echo '<div id="' . $this->id . '" class="w3-hide w3-container w3-dropdown-content ">';
         echo $this->contenidoAcordion();
         echo '</div>';
         echo '</div>';

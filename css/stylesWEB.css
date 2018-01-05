@@ -264,7 +264,7 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
 .w3-border-proshare-a {border-color:#0f2645 !important}
 
 .w3-hover-proshare-a:hover {color:#fff !important; background-color:#0f2645 !important}
-.w3-hover-text-proshare-a {color:#0f2645 !important}
+.w3-hover-text-proshare-a:hover  {color:#0f2645 !important}
 .w3-hover-border-proshare-a:hover {border-color:#0f2645 !important}
 
 /*css ProShare Naranja*/
@@ -289,9 +289,10 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
 .w3-border-proshare-n {border-color:#ff643c !important}
 
 .w3-hover-proshare-n:hover {color:#fff !important; background-color:#ff643c !important}
-.w3-hover-text-proshare-n {color:#ff643c !important}
+.w3-hover-text-proshare-n:hover  {color:#ff643c !important}
 .w3-hover-border-proshare-n:hover {border-color:#ff643c !important}
 
+.w3-dropdown-full{width: 100% !important}
 
 .carousel-inner > .item > img,.carousel-inner > .item > a > img {width: 100%;height: 60px;margin: auto;}
 .carrusel{width:100%;margin-right:auto;margin-left:auto}
