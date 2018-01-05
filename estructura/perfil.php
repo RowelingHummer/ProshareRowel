@@ -25,24 +25,25 @@ and open the template in the editor.
         include_once './estructura/elementos/header.php';
         include_once './estructura/elementos/modalLogin.php';
         ?>
-<div class="w3-container w3-content" style="max-width:1400px;margin-top:80px">    
-  <!-- The Grid -->
-  <div class="w3-row">
-    <!-- Left Column -->
-    <div class="w3-col l3 m4 s12">
-                <?php include_once './estructura/elementos/perfilCard.php'; ?>
-                <?php include_once './estructura/elementos/acordion.php'; ?>
-    </div>
-    <div class="w3-col l6 m8 s12">
-                <?php include_once './estructura/elementos/ajustesGenerales.php'; ?>
-    </div>
-    <div class="w3-col l3 m12 s12">
-                <?php include_once './clases/proximasReservas.php'; ?>
-                <?php include_once './estructura/elementos/carrousel.php'; ?>
-    </div>
-  </div>
-</div>
+        <div class="w3-container w3-content" style="max-width:1400px;margin-top:80px">    
+            <!-- The Grid -->
+            <div class="w3-row">
+                <!-- Left Column -->
+                <div class="w3-col l3 m4 s12">
+                    <?php include_once './estructura/elementos/perfilCard.php'; ?>
+                    <?php include_once './estructura/elementos/acordionPerfil.php'; ?><br>
+                    <?php include_once './clases/proximasReservas.php'; ?>
+                </div>
+                <div class="w3-col l6 m8 s12">
+                    <?php include_once './estructura/elementos/ajustesGenerales.php'; ?>
+                </div>
+                <div class="w3-col l3 m12 s12">
+
+                    <?php include_once './estructura/elementos/carrousel.php'; ?>
+                </div>
+            </div>
+        </div>
         <?php include_once './estructura/elementos/footer.php'; ?>
-   
+
     </body>
 </html>

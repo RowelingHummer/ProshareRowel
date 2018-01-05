@@ -11,6 +11,6 @@ $ajustes = array(
 );
 $ajustes = new ajustesGenerales($ajustes);
 $ajustes->mostrarAjustesPerfilGeneral();
-?>
+
 
 

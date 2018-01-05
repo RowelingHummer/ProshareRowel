@@ -69,7 +69,8 @@ and open the template in the editor.
             <h5>some text...</h5>
 
         </div>
-        <?php include_once './estructura/footer.php'; ?>
+        <?php include_once './estructura/elementos/footer.php'; ?>
+        <br><br>
         <script>
             var $thumbs_wrapper = $('#navCategorias');
             var $thumbs = $('#scrollmenu');
