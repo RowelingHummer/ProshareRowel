@@ -12,7 +12,23 @@ class formulario {
     public $formulario = array();
     private $camposFormulario = array();
     public $submit = array();
-    private $selectores;
+    private $camposSelect = array();
+
+    /**
+     * 
+     * setter ( array(nombre , clases , accion ))
+     * 
+     * @param string  $formulario           array(nombre , clases , accion )
+     * @param string  $submit               array(nombre , clases )
+     * @param string  $camposFormulario     array ( Tipo , label , nombre , placeholder , clases , valor por defecto , valor Maximo , valor Minimo , otros atributos )
+     * @param string  $camposSelect         array  (nombre , clases , accion )
+     */
+    public function __construct($formulario, $submit, $camposFormulario, $camposSelect) {
+        setFormulario($formulario);
+        setSubmit($submit);
+        setCamposFormulario($camposFormulario);
+        setCamposSelect($camposSelect);
+    }
 
     /**
      * 
@@ -34,12 +50,28 @@ class formulario {
 
     /**
      * 
+     * setter ( array(nombre , clases ))
+     * 
+     * @param string  $submit   array
+     */
+    protected function setSubmit($submit) {
+        $valoresPredeterminadosSubmit = array("Enviar", "w3-button w3-block w3-section w3-proshare-n w3-ripple w3-padding");
+        for ($i = 0; $i < sizeof($valoresPredeterminadosSubmit); $i++) {
+            if ($submit[$i] !== "") {
+                $this->submit[$i] = $submit[$i];
+            } else {
+                $this->submit[$i] = $valoresPredeterminadosSubmit[$i];
+            }
+        }
+    }
+
+    /**
+     * 
      * setter ( Tipo , label , nombre , placeholder , clases , valor por defecto , valor Maximo , valor Minimo , otros atributos )
      * 
      * @param string  $camposFormulario   array
      */
     protected function setCamposFormulario($camposFormulario) {
-        
         $valoresPredeterminadosCamposFormulario = array("text", "entrada", "Entrada", "Entrada de texto", "w3-input", "", "", "", "");
         for ($i = 0; $i < sizeof($camposFormulario); $i++) {
             for ($j = 0; $j < sizeof($valoresPredeterminadosCamposFormulario); $j++) {
@@ -54,18 +86,17 @@ class formulario {
 
     /**
      * 
-     * setter ( array(nombre , clases ))
+     * setter ( Tipo , label , nombre , placeholder , clases , valor por defecto , valor Maximo , valor Minimo , otros atributos )
      * 
-     * @param string  $submit   array
+     * @param string  $camposSelect   array
      */
-    protected function setSubmit($submit) {
-        /** setter ( nombre , clases ) */
-        $valoresPredeterminadosSubmit = array("Enviar", "w3-button w3-block w3-section w3-proshare-n w3-ripple w3-padding");
-        for ($i = 0; $i < sizeof($valoresPredeterminadosSubmit); $i++) {
-            if ($submit[$i] !== "") {
-                $this->submit[$i] = $submit[$i];
+    protected function setCamposSelect($camposSelect) {
+
+        foreach ($camposSelect as $key => $value) {
+            if ($this->camposSelect[$key] != "") {
+                $this->camposSelect[$key] = $value;
             } else {
-                $this->submit[$i] = $valoresPredeterminadosSubmit[$i];
+                $this->camposSelect[$key] = "";
             }
         }
     }
@@ -90,59 +121,64 @@ class formulario {
     }
 
     protected function generarCampos() {
-        $camposFormulario= $this->camposFormulario;
+        $camposFormulario = $this->camposFormulario;
+        
         for ($i = 0; $i < sizeof($camposFormulario); $i++) {
             $e = '<div class="w3-section">';
-            $e.= $this->generarLabel($camposFormulario[$i][1]);
-            $e.= $this->generarCampo($camposFormulario[$i][0], $camposFormulario[$i][2], $camposFormulario[$i][3], $camposFormulario[$i][4], $camposFormulario[$i][5], $camposFormulario[$i][6], $camposFormulario[$i][7], $camposFormulario[$i][8]);
-        
-            $e.= '</div>';
+            $e .= $this->generarLabel($camposFormulario[$i][1]);
+            $e .= $this->generarCampo($camposFormulario[$i][0], $camposFormulario[$i][2], $camposFormulario[$i][3], $camposFormulario[$i][4], $camposFormulario[$i][5], $camposFormulario[$i][6], $camposFormulario[$i][7], $camposFormulario[$i][8]);
+
+            $e .= '</div>';
         }
-        
     }
-    
+
     private function generarLabel($i) {
         $tipoIcono = $i;
         if (strpos($tipoIcono, "fa-") !== FALSE) {
             $e = '<i class="fa ' . $tipoIcono . ' w3-xxlarge"></i>';
         } elseif (strpos($tipoIcono, "material-icons") !== FALSE) {
-            $divisionMaterialIcons= explode(" ", $tipoIcono);
+            $divisionMaterialIcons = explode(" ", $tipoIcono);
             $e = '<i class="' . $divisionMaterialIcons[0] . ' w3-xxlarge">' . $divisionMaterialIcons[1] . '</i>';
         } elseif (strpos($tipoIcono, "glyphicon") !== FALSE) {
             $e = '<i class="glyphicon ' . $tipoIcono . ' w3-xxlarge"></i>';
         } else {
-            $e = '<label>'.$tipoIcono.'</label>';
+            $e = '<label>' . $tipoIcono . '</label>';
         }
         return $e;
     }
-    private function generarCampo($tipo,$nombre,$placeholder,$clases,$valor,$max,$min,$otherAttributes) {              
+
+    private function generarCampo($tipo, $nombre, $placeholder, $clases, $valor, $max, $min, $otherAttributes) {
+
         switch ($tipo) {
             case "select":
+                $camposSelect= $this->camposSelect[$nombre];
+                $e = '<select  class="' . $clases . '" name="' . $nombre . '" ' . $otherAttributes . '>';
+                $e.= '<option value="" disabled selected>' . $placeholder . '</option>';
+                foreach ($camposSelect as $key => $value) {
+                    $e.='<option value="'.$key.'">'.$value.'</option>';
+                }
+                $e.='</select>';
                 break;
-            case "texttarea":
+            case "textarea":
+                $e = '<textarea  class="' . $clases . '" name="' . $nombre . '"  placeholder="' . $placeholder . ' ' . $otherAttributes . '>';
+                $e .= "$valor";
+                $e .= '</textarea>';
                 break;
 
             default:
-                $e= '<input class="'.$clases.'" name="'.$nombre.'" type="'.$tipo.'" placeholder="'.$placeholder.'" value="'.$valor.'" max="'.$max.'" min="'.$min.'" '.$otherAttributes.' >';
+                $e = '<input class="' . $clases . '" name="' . $nombre . '" type="' . $tipo . '" placeholder="' . $placeholder . '" value="' . $valor . '" max="' . $max . '" min="' . $min . '" ' . $otherAttributes . ' >';
                 break;
         }
         return $e;
     }
+
 }
 
 class formularioEditarPerfil extends formulario {
-
-    public function __construct($formulario, $submit, $camposFormulario) {
-        setFormulario($formulario);
-        setSubmit($submit);
-        setCamposFormulario($camposFormulario);
-    }
-
+    
 }
 
 $age = array("Peter" => array("1", "2", "3"), "Ben" => array("4", "5", "6"), "Joe" => array("7", "8", "9"));
-
-
 ?>
 <!DOCTYPE html>
 
