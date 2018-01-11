@@ -1,0 +1,17 @@
+<?php
+
+include './clases/ajustesGenerales.php';
+
+$ajustes = array(
+    array("material-icons account_balance_wallet", "153.000", "Billetera", "billetera"),
+    array("glyphicon-gift", "50", "Bonos", "bonos"),
+    array("material-icons history", "20", "Historial Servicios", "historialServicios"),
+    array("glyphicon-cog", "", "Ajustes", "ajustes"),
+    array("fa-trophy", "", "Comparte y gana", "comparteGana"),
+);
+$ajustes = new ajustesGenerales($ajustes);
+$ajustes->mostrarAjustesPerfilGeneral();
+
+
+
+

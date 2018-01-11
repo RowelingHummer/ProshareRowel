@@ -292,17 +292,18 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
 .w3-hover-text-proshare-n:hover  {color:#ff643c !important}
 .w3-hover-border-proshare-n:hover {border-color:#ff643c !important}
 
-.w3-dropdown-full{width: 100% !important}
+.w3-dropdown-full{width: 100%}
+.w3-search{width:100% !important}
 
 .carousel-inner > .item > img,.carousel-inner > .item > a > img {width: 100%;height: 60px;margin: auto;}
 .carrusel{width:100%;margin-right:auto;margin-left:auto}
 /* Hide the carousel text when the screen is less than 600 pixels wide */
 @media (max-width: 600px) {.carousel-caption {display: none;}}
 
-@media (max-width:768px){.carrusel{max-width:576px} .carousel-inner > .item > img,.carousel-inner > .item > a > img {width: 100%;height: 200px;margin: auto;}}
-@media (min-width:768px){.carrusel{max-width:720px} .carousel-inner > .item > img,.carousel-inner > .item > a > img {width: 100%;height: 250px;margin: auto;}}
-@media (min-width:992px){.carrusel{max-width:960px} .carousel-inner > .item > img,.carousel-inner > .item > a > img {width: 100%;height: 300px;margin: auto;}}
-@media (min-width:1200px){.carrusel{max-width:1140px} .carousel-inner > .item > img,.carousel-inner > .item > a > img {width: 100%;height: 350px;margin: auto;}}
+@media (max-width:768px){.w3-search{max-width:190px !important}.carrusel{max-width:576px} .carousel-inner > .item > img,.carousel-inner > .item > a > img {width: 100%;height: 200px;margin: auto;}}
+@media (min-width:768px){.w3-search{max-width:300px !important}.carrusel{max-width:720px} .carousel-inner > .item > img,.carousel-inner > .item > a > img {width: 100%;height: 250px;margin: auto;}}
+@media (min-width:992px){.w3-search{max-width:230px !important}.carrusel{max-width:960px} .carousel-inner > .item > img,.carousel-inner > .item > a > img {width: 100%;height: 300px;margin: auto;}}
+@media (min-width:1200px){.w3-search{max-width:350px !important}.carrusel{max-width:1140px} .carousel-inner > .item > img,.carousel-inner > .item > a > img {width: 100%;height: 350px;margin: auto;}}
 
 .w3-facebook {color:#fff !important; background-color:#3b5998 !important}
 .w3-fifth{width: 20%}
@@ -311,7 +312,7 @@ div.scrollmenu {
     overflow: hidden;
     white-space: nowrap;
 }
-.icono-proshare{height:45px;width:200px}
+.icono-proshare{height:27px;width:120px}
 @media (max-width:768px){.icono-proshare{height:27px;width:120px}}
 div.scrollmenu a {display: inline-block;text-align: center;padding: 14px;text-decoration: none;}
 /*estilos para iconos de RRSS*/

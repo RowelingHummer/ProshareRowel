@@ -23,6 +23,7 @@ and open the template in the editor.
     <body class="w3-padding-32" onload="armarNavCategorias()">
         <?php
         include_once './estructura/elementos/header.php';
+        include_once './estructura/elementos/navInferiorMobile.php';
         include_once './estructura/elementos/modalLogin.php';
         ?>
         <div class="w3-container w3-content" style="max-width:1400px;margin-top:80px">    
