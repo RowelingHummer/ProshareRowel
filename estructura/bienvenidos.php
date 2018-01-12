@@ -35,7 +35,7 @@ and open the template in the editor.
 
                 </div>
                 <div class="w3-col l6 m6 s12">
-                    <?php include_once './estructura/elementos/ajustesGenerales.php'; ?>
+                    <?php include_once './estructura/elementos/formularioEditarPerfil.php'; ?>
                 </div>
             </div>
         </div>
