@@ -9,7 +9,7 @@
 <div class="w3-container w3-text-proshare-n ">
     <h1 class="w3-xxxlarge"><strong>Bienvenido, <?php echo "$nombreUsuario"?></strong></h1>    
 </div>
-<div class="w3-container w3-xlarge">
+<div class="w3-container w3-large">
     <p>Nos complace que te hayas un unido a la Comunidad <strong class="w3-text-proshare-n">ProShare.</strong></p>    
     <p>Para comenzar debes ingresar información básica para que te podamos prestar el mejor servicio.</p>    
     <p>Para mejorar tu experiencia dentro de la comunidad nos encantaría conocerte mejor, 

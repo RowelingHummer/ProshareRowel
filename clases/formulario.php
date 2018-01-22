@@ -9,21 +9,21 @@ class formulario {
 
     //put your code here
 
-    public $formulario = array("", "", "", "", "");
+    public $formulario = array("", "", "", "", "", "");
     public $submit = array("", "");
-    private $camposFormulario = array(array("", "", "", "", "", "", "", "", "", ""));
-    private $camposSelect = array("" => "");
+    protected $camposFormulario = array(array("", "", "", "", "", "", "", "", "", ""));
+    protected $camposSelect = array("" => "");
 
     /**
      * 
      * setter ( array(nombre , clases , accion ))
      * 
-     * @param string  $formulario           array(nombre , clases , accion )
-     * @param string  $submit               array(nombre , clases )
+     * @param string  $formulario           array (nombre , clasesTitulo , clasesFormulario , accion , method, posicionLabels)
+     * @param string  $submit               array ( nombre , clases )
      * @param string  $camposFormulario     array ( Tipo , label , nombre , placeholder , clases , valor por defecto , valor Maximo , valor Minimo , otros atributos )
      * @param string  $camposSelect         array  (nombre , clases , accion )
      */
-    public function __construct($formulario = array("", "", "", "", ""), $submit = array("", ""), $camposFormulario = array(array("", "", "", "", "", "", "", "", "", "")), $camposSelect = array("" => array("" => "", "" => ""))) {
+    public function __construct($formulario = array("", "", "", "", "", ""), $submit = array("", ""), $camposFormulario = array(array("", "", "", "", "", "", "", "", "", "")), $camposSelect = array("" => array("" => "", "" => ""))) {
         $this->setFormulario($formulario);
         $this->setSubmit($submit);
         $this->setCamposFormulario($camposFormulario);
@@ -32,13 +32,13 @@ class formulario {
 
     /**
      * 
-     * setter ( array(nombre , clasesTitulo , clasesFormulario , accion , method))
+     * setter ( array(nombre , clasesTitulo , clasesFormulario , accion , method, posicionLabels))
      * 
      * @param string  $formulario   array
      */
     protected function setFormulario($formulario) {
 
-        $valoresPredeterminadosFormulario = array("Mi Formulario", "w3-center ", "w3-container w3-white  w3-margin", "./action_page.php", "post");
+        $valoresPredeterminadosFormulario = array("Mi Formulario", "w3-center ", "w3-container w3-white  w3-padding", "./action_page.php", "post","left");
         for ($i = 0; $i < sizeof($valoresPredeterminadosFormulario); $i++) {
             if ($formulario[$i] !== "") {
                 $this->formulario[$i] = $formulario[$i];
@@ -72,7 +72,7 @@ class formulario {
      * @param string  $camposFormulario   array
      */
     protected function setCamposFormulario($camposFormulario) {
-        $valoresPredeterminadosCamposFormulario = array("text", "", " w3-large w3-text-proshare-a", "entrada", "Entrada de texto", "w3-input ", "", "", "", "");
+        $valoresPredeterminadosCamposFormulario = array("text", "", "w3-small w3-text-proshare-a", "entrada", "Entrada de texto", "w3-input w3-border w3-small ", "", "", "", "");
         for ($i = 0; $i < sizeof($camposFormulario); $i++) {
             for ($j = 0; $j < sizeof($valoresPredeterminadosCamposFormulario); $j++) {
                 if ($camposFormulario[$i][$j] !== "") {
@@ -112,12 +112,14 @@ class formulario {
     }
 
     private function generarTitulo() {
-        $e = '<h1 class=" ' . $this->formulario[1] . '"><strong>' . $this->formulario[0] . '</strong></h2>';
+        $e = '<h1 class="' . $this->formulario[1] . '"><strong>' . $this->formulario[0] . '</strong></h2>';
         return $e;
     }
 
     private function generarBotonAccion() {
-        $e = '<button class="' . $this->submit[1] . '"><strong>' . $this->submit[0] . '</strong></button>';
+        $e = '<div class="w3-center">';
+        $e .= '<button class="' . $this->submit[1] . '"><strong>' . $this->submit[0] . '</strong></button>';
+        $e .= '</div>';
         return $e;
     }
 
@@ -125,10 +127,36 @@ class formulario {
         $camposFormulario = $this->camposFormulario;
         $e = '';
         for ($i = 0; $i < sizeof($camposFormulario); $i++) {
-            $e .= '<div class="w3-section">';
-            $e .= $this->generarLabel($camposFormulario[$i][1], $camposFormulario[$i][2]);
-            $e .= $this->generarCampo($camposFormulario[$i][0], $camposFormulario[$i][3], $camposFormulario[$i][4], $camposFormulario[$i][5], $camposFormulario[$i][6], $camposFormulario[$i][7], $camposFormulario[$i][8], $camposFormulario[$i][9]);
-            $e .= '</div>';
+            $label = $this->generarLabel($camposFormulario[$i][1], $camposFormulario[$i][2]);
+            $campo = $this->generarCampo($camposFormulario[$i][0], $camposFormulario[$i][3], $camposFormulario[$i][4], $camposFormulario[$i][5], $camposFormulario[$i][6], $camposFormulario[$i][7], $camposFormulario[$i][8], $camposFormulario[$i][9]);
+            $posicionLabel = $this->formulario[5];
+            $e .= $this->ubicacionLabelCampo($posicionLabel, $label, $campo);
+        }
+        return $e;
+    }
+
+    private function ubicacionLabelCampo($posicionLabel, $label, $campo) {
+        switch ($posicionLabel) {
+            case "left":
+                $e = '<div class="w3-section"><div class="w3-row w3-container"><div class="w3-col l2 w3-right-align w3-margin-right">';
+                $e .= $label . '</div><div class="w3-col l9">';
+                $e .= $campo . '</div></div></div>';
+                break;
+            case "right":
+                $e = '<div class="w3-section"><div class="w3-row w3-container"><div class="w3-col l9 w3-right-align w3-margin-right">';
+                $e .= $campo . '</div><div class="w3-col l2">';
+                $e .= $label . '</div></div></div>';
+                break;
+            case "top":
+                $e = $label;
+                $e .= $campo;
+                break;
+            case "bottom":
+                $e = $campo;
+                $e .= $label;
+                break;
+            default:
+                break;
         }
         return $e;
     }
@@ -136,7 +164,7 @@ class formulario {
     private function generarLabel($label, $clases) {
         $tipoIcono = $label;
         if (strpos($tipoIcono, "fa-") !== FALSE) {
-            $e = '<i class="fa ' . $tipoIcono . '  ' . $clases . '"></i>';
+            $e = '<i class="fa ' . $tipoIcono . ' ' . $clases . '"></i>';
         } elseif (strpos($tipoIcono, "material-icons") !== FALSE) {
             $divisionMaterialIcons = explode(" ", $tipoIcono);
             $e = '<i class="' . $divisionMaterialIcons[0] . '  ' . $clases . '">' . $divisionMaterialIcons[1] . '</i>';
@@ -175,6 +203,18 @@ class formulario {
         return $e;
     }
 
+}
+
+class formularioEditarPerfil extends formulario {
+    
+        public function generarFormularioEditarPerfil() {
+        $e = '<form action="' . $this->formulario[3] . '" class="' . $this->formulario[2] . '" method="' . $this->formulario[4] . '">';
+        $e .= $this->generarTitulo();
+        $e .= $this->generarCampos();
+        $e .= $this->generarBotonAccion();
+        $e .= '</form>';
+        return $e;
+    }
 }
 ?>
 <!--<!DOCTYPE html>
