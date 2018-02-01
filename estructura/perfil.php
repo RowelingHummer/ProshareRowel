@@ -20,25 +20,25 @@ and open the template in the editor.
         <script src="./js/navCategorias.js"></script>
 
     </head>
-    <body class="w3-padding-32" onload="armarNavCategorias()">
+    <body class="rowel-padding-32" onload="armarNavCategorias()">
         <?php
         include_once './estructura/elementos/header.php';
         include_once './estructura/elementos/navInferiorMobile.php';
         include_once './estructura/elementos/modalLogin.php';
         ?>
-        <div class="w3-container w3-content" style="max-width:1400px;margin-top:80px">    
+        <div class="rowel-container rowel-content" style="max-width:1400px;margin-top:80px">    
             <!-- The Grid -->
-            <div class="w3-row">
+            <div class="rowel-row">
                 <!-- Left Column -->
-                <div class="w3-col l3 m4 s12">
+                <div class="rowel-col l3 m4 s12">
                     <?php include_once './estructura/elementos/perfilCard.php'; ?>
                     <?php include_once './estructura/elementos/acordionPerfil.php'; ?><br>
                     <?php include_once './clases/proximasReservas.php'; ?>
                 </div>
-                <div class="w3-col l6 m8 s12">
+                <div class="rowel-col l6 m8 s12">
                     <?php include_once './estructura/elementos/ajustesGenerales.php'; ?>
                 </div>
-                <div class="w3-col l3 m12 s12">
+                <div class="rowel-col l3 m12 s12">
 
                     <?php include_once './estructura/elementos/carrousel.php'; ?>
                 </div>

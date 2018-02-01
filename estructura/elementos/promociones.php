@@ -17,14 +17,14 @@ $Vehiculos = new promociones("Vehiculos", sizeof($promocionVehiculos), $promocio
 ?>
 <div class="jumbotron">
     <div class="container">
-        <div class="w3-row w3-container">
-            <div class="w3-col l4 w3-padding">
+        <div class="rowel-row rowel-container">
+            <div class="rowel-col l4 rowel-padding">
 <?php $belleza->mostrarPromocion() ?>
             </div>
-            <div class="w3-col l4 w3-padding">
+            <div class="rowel-col l4 rowel-padding">
 <?php $comida->mostrarPromocion() ?>
             </div>
-            <div class="w3-col l4 w3-padding">
+            <div class="rowel-col l4 rowel-padding">
 <?php $Vehiculos->mostrarPromocion() ?>
             </div>
         </div>

@@ -14,7 +14,7 @@ class ajustesGenerales {
     }
 
     public function mostrarAjustesPerfilGeneral() {
-        $contenido = '<div class="w3-row-padding w3-margin-bottom">';
+        $contenido = '<div class="rowel-row-padding rowel-margin-bottom">';
         $contenido .= $this->generarCuadricula();
         $contenido .= '</div>';
         echo "$contenido";
@@ -23,11 +23,11 @@ class ajustesGenerales {
     private function generarCuadricula() {
         $e="";
         for ($i = 0; $i < sizeof($this->ajustes); $i++) {
-            $e .= '<div class="w3-third w3-panel " >';
-            $e .= '<div class="w3-container w3-text-proshare-a w3-hover-text-proshare-n w3-border w3-round w3-border-proshare-a w3-hover-border-proshare-n  w3-padding-16" style="height:140px" onclick="openModal('."'".$this->ajustes[$i][3]."'".')">';
-            $e .= '<div class="w3-left">' . $this->generarLabel($this->ajustes[$i][0]) . '</div>';
-            $e .= '<div class="w3-right"><h5>'.$this->ajustes[$i][1].'</h5></div>';
-            $e .= '<div class="w3-clear"></div>';
+            $e .= '<div class="rowel-third rowel-panel " >';
+            $e .= '<div class="rowel-container rowel-text-wiquu-am rowel-hover-text-wiquu-az rowel-border rowel-round rowel-border-wiquu-am rowel-hover-border-wiquu-az  rowel-padding-16" style="height:140px" onclick="openModal('."'".$this->ajustes[$i][3]."'".')">';
+            $e .= '<div class="rowel-left">' . $this->generarLabel($this->ajustes[$i][0]) . '</div>';
+            $e .= '<div class="rowel-right"><h5>'.$this->ajustes[$i][1].'</h5></div>';
+            $e .= '<div class="rowel-clear"></div>';
             $e .= '<h5>'.$this->ajustes[$i][2].'</h5>';
             $e .= '</div>';
             $e .= '</div>';
@@ -38,12 +38,12 @@ class ajustesGenerales {
     private function generarLabel($i) {
         $tipoIcono = $i;
         if (strpos($tipoIcono, "fa-") !== FALSE) {
-            $e = '<i class="fa ' . $tipoIcono . ' w3-xxlarge"></i>';
+            $e = '<i class="fa ' . $tipoIcono . ' rowel-xxlarge"></i>';
         } elseif (strpos($tipoIcono, "material-icons") !== FALSE) {
             $divisionMaterialIcons= explode(" ", $tipoIcono);
-            $e = '<i class="' . $divisionMaterialIcons[0] . ' w3-xxlarge">' . $divisionMaterialIcons[1] . '</i>';
+            $e = '<i class="' . $divisionMaterialIcons[0] . ' rowel-xxlarge">' . $divisionMaterialIcons[1] . '</i>';
         } elseif (strpos($tipoIcono, "glyphicon") !== FALSE) {
-            $e = '<i class="glyphicon ' . $tipoIcono . ' w3-xxlarge"></i>';
+            $e = '<i class="glyphicon ' . $tipoIcono . ' rowel-xxlarge"></i>';
         } else {
             $e = '<label>'.$tipoIcono.'</label>';
         }

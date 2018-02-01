@@ -20,7 +20,7 @@ and open the template in the editor.
         <script src="js/navCategorias.js"></script>
 
     </head>
-    <body class="w3-padding-32" onload="armarNavCategorias()">
+    <body class="rowel-padding-32" onload="armarNavCategorias()">
         <?php
         include_once './estructura/elementos/header.php';
         include_once './estructura/elementos/navInferiorMobile.php';
@@ -32,7 +32,7 @@ and open the template in the editor.
             ?>
  
         </div>
-        <div class="w3-container container">
+        <div class="rowel-container container">
             <?php
             include_once './estructura/elementos/navCategorias.php';
             ?>             
@@ -42,7 +42,7 @@ and open the template in the editor.
             include_once './estructura/elementos/navCategoriasMobile.php';
             ?>  
        
-        <div class='container w3-text-proshare-n w3-padding-16'><h1><strong>Promociones</strong></h1></div>
+        <div class='container rowel-text-wiquu-az rowel-padding-16'><h1><strong>Promociones</strong></h1></div>
         <div>
             <?php
             include_once './estructura/elementos/promociones.php';
@@ -59,7 +59,7 @@ and open the template in the editor.
             ?>         
         </div>
         <div class="container">
-            <h1> santiago quiere que proshare lo saque de pobre </h1>
+            <h1> santiago quiere que wiquu lo saque de pobre </h1>
             <h5>some text...</h5>
             <h5>some text...</h5>
             <h5>some text...</h5>

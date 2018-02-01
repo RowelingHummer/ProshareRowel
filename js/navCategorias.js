@@ -72,8 +72,8 @@ function armarNavCategorias() {
     var contenidoMobile = '.mobileMenu';
     $(contenidoWeb).empty();
     for (j in categorias) {
-        btnWeb = '<a class="w3-btn w3-hover-proshare-n w3-large menu"><img src="' + categorias[j][1] + '"  width="25px" height="25px">' + categorias[j][0] + '</a>';
-        btnMb = '<div class="w3-col m2 s3 w3-center w3-hover-proshare-n categorias" id="'+categorias[j][0]+'"style="height:60px" id=""><a href="'+ categorias[j][1] +'" class=" w3-small menu"><div style="height:40px"> <img src="' + categorias[j][1] + '"  class="w3-container"></div><div class="w3-container w3-center" style="height:20px">' + categorias[j][0] + '</div></a></div>';
+        btnWeb = '<a class="rowel-btn rowel-hover-wiquu-az rowel-large menu"><img src="' + categorias[j][1] + '"  width="25px" height="25px">' + categorias[j][0] + '</a>';
+        btnMb = '<div class="rowel-col m2 s3 rowel-center rowel-hover-wiquu-az categorias" id="'+categorias[j][0]+'"style="height:60px" id=""><a href="'+ categorias[j][1] +'" class=" rowel-small menu"><div style="height:40px"> <img src="' + categorias[j][1] + '"  class="rowel-container"></div><div class="rowel-container rowel-center" style="height:20px">' + categorias[j][0] + '</div></a></div>';
         $(contenidoWeb).append(btnWeb);
         $(contenidoMobile).append(btnMb);
         console.log(j);

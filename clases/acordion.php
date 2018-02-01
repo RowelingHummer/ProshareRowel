@@ -21,11 +21,11 @@ class acordion {
     }
 
     public function generarAcordion() {
-        $e = '<div class="w3-card w3-round w3-hover-light-grey">';
-        $e .= '<div class="w3-white">';
-        $e .= '<button onclick="myFunction(' . "'" . $this->id . "'" . ')" class="w3-button w3-block w3-theme-l1 w3-left-align w3-row">';
-        $e .= '<div class="w3-col l2 m2 s2 ">'.$this->generarIcono() .' </div><div class="w3-col l10 m10 s10 ">   '. $this->nombre . '</div></button>';
-        $e .= '<div id="' . $this->id . '" class="w3-hide w3-container  ">';
+        $e = '<div class="rowel-card rowel-round rowel-hover-light-grey">';
+        $e .= '<div class="rowel-white">';
+        $e .= '<button onclick="myFunction(' . "'" . $this->id . "'" . ')" class="rowel-button rowel-block rowel-theme-l1 rowel-left-align rowel-row">';
+        $e .= '<div class="rowel-col l2 m2 s2 ">'.$this->generarIcono() .' </div><div class="rowel-col l10 m10 s10 ">   '. $this->nombre . '</div></button>';
+        $e .= '<div id="' . $this->id . '" class="rowel-hide rowel-container  ">';
         $e .= $this->contenidoAcordion();
         $e .= '</div>';
         $e .= '</div>';
@@ -49,7 +49,7 @@ class acordion {
     private function contenidoAcordion() {
         $e = "";
         for ($i = 0; $i < sizeof($this->contenidoAcordion); $i++) {
-            $e .= '<a href="' . $this->contenidoAcordion[$i][1] . '" class="w3-button w3-block w3-left-align">' . $this->contenidoAcordion[$i][0] . '</a>';
+            $e .= '<a href="' . $this->contenidoAcordion[$i][1] . '" class="rowel-button rowel-block rowel-left-align">' . $this->contenidoAcordion[$i][0] . '</a>';
         }
         return $e;
     }

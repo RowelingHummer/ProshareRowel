@@ -5,12 +5,12 @@
  * and open the template in the editor.
  */
 ?>
-<nav class="w3-bottom w3-hide-large w3-hide-medium ">
-    <div class="w3-row w3-proshare-a w3-large">
-        <div class="w3-fifth w3-center w3-hover-proshare-n w3-padding-16"><a href="#" class=""><i class="fa fa-heart"></i></a></div>
-        <div class="w3-fifth w3-center w3-hover-proshare-n w3-padding-16"><a href="#" class=""><i class="fa fa-calendar"></i></a></div>
-        <div class="w3-fifth w3-center w3-hover-proshare-n w3-padding-16"><a href="#" class=""><i class="glyphicon glyphicon-home"></i></a></div>
-        <div class="w3-fifth w3-center w3-hover-proshare-n w3-padding-16"><a href="#" class=""><i class="fa fa-shopping-cart"></i></a></div>
-        <div class="w3-fifth w3-center w3-hover-proshare-n w3-padding-16"><a href="#" class=""><i class="fa fa-ticket"></i></a></div>
+<nav class="rowel-bottom rowel-hide-large rowel-hide-medium ">
+    <div class="rowel-row rowel-wiquu-am rowel-large">
+        <div class="rowel-fifth rowel-center rowel-hover-wiquu-az rowel-padding-16"><a href="#" class=""><i class="fa fa-heart"></i></a></div>
+        <div class="rowel-fifth rowel-center rowel-hover-wiquu-az rowel-padding-16"><a href="#" class=""><i class="fa fa-calendar"></i></a></div>
+        <div class="rowel-fifth rowel-center rowel-hover-wiquu-az rowel-padding-16"><a href="#" class=""><i class="glyphicon glyphicon-home"></i></a></div>
+        <div class="rowel-fifth rowel-center rowel-hover-wiquu-az rowel-padding-16"><a href="#" class=""><i class="fa fa-shopping-cart"></i></a></div>
+        <div class="rowel-fifth rowel-center rowel-hover-wiquu-az rowel-padding-16"><a href="#" class=""><i class="fa fa-ticket"></i></a></div>
     </div>
 </nav>

@@ -75,9 +75,9 @@ class navCategorias {
             }else{
                 echo'<div class="item">';
             }
-            echo '<div class="w3-row"><div class="w3-third">';
+            echo '<div class="rowel-row"><div class="rowel-third">';
             echo '<img src="'.$this->array_iconos[$i][0].'" alt="Chania" width="20px" height="p0px">';
-            echo '</div><div class="w3-twothird w3-text-proshare-n">'.$this->array_iconos[$i][1];
+            echo '</div><div class="rowel-twothird rowel-text-wiquu-az">'.$this->array_iconos[$i][1];
             echo '</div></div>';          
        }
        echo '</div>';

@@ -21,15 +21,15 @@ class jumbotron2 {
         echo '</div>';
     }
     private function row(){
-        echo '<div class="w3-cell-row w3-center" >';
-        $this->container($this->titulo[0], $this->mensaje[0],"w3-light-gray");  
-        $this->container($this->titulo[1], $this->mensaje[1],"w3-proshare-a");
+        echo '<div class="rowel-cell-row rowel-center" >';
+        $this->container($this->titulo[0], $this->mensaje[0],"rowel-light-gray");  
+        $this->container($this->titulo[1], $this->mensaje[1],"rowel-wiquu-am");
         echo '</div>';   
     }
     private function container($titulo,$mensaje,$color) {
-        echo '<div class="w3-mobile w3-padding-64 w3-center  '.$color.' w3-cell w3-container" style="width:50%">';//style="height:'.$this->height.'px"
-        echo "<h1 class='w3-text-proshare-n w3-xxxlarge '><strong>$titulo</strong></h1>";
-        echo "<p class='w3-xlarge'>$mensaje</p>";
+        echo '<div class="rowel-mobile rowel-padding-64 rowel-center  '.$color.' rowel-cell rowel-container" style="width:50%">';//style="height:'.$this->height.'px"
+        echo "<h1 class='rowel-text-wiquu-az rowel-xxxlarge '><strong>$titulo</strong></h1>";
+        echo "<p class='rowel-xlarge'>$mensaje</p>";
         echo '</div>';
     }
 }

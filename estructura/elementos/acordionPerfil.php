@@ -33,7 +33,7 @@ $contenidoMiEmpresa = array(array("Agenda del mes",
         "#"
     ),
 );
-echo '<div class="w3-card">';
+echo '<div class="rowel-card">';
 $acordionAyuda = new acordion("acordionAyuda", "Ayuda", $contenidoAyuda,"fa-circle-o-notch fa-fw");
 $acordionAyuda->generarAcordion();
 if ($idEmpresa !== "") {

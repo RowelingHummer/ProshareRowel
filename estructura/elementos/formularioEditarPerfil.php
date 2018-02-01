@@ -1,8 +1,8 @@
 <?php
 include './clases/formulario.php';
 $age = array("Peter" => array("1", "2", "3"), "Ben" => array("4", "5", "6"), "Joe" => array("7", "8", "9"));
-$formulario = array("Editar Perfil","w3-text-proshare-n w3-xxlarge w3-center","w3-text-proshare-a ","funcion()","","");/** nombre , clases , accion */
-$submit = array("Guardar","w3-button  w3-section w3-proshare-n w3-ripple w3-padding w3-hover-proshare-a w3-hover-text-proshare-n");/** nombre , clases */
+$formulario = array("Editar Perfil","rowel-text-wiquu-az rowel-xxlarge rowel-center","rowel-text-wiquu-am ","funcion()","","");/** nombre , clases , accion */
+$submit = array("Guardar","rowel-button rowel-section rowel-wiquu-az rowel-ripple rowel-padding rowel-hover-wiquu-am rowel-hover-text-wiquu-az");/** nombre , clases */
 $camposFormulario = array(
     array("file",""   , "","Imagen","Nombre Usuario","","","","",""),
     array("text","Nombre Usuario"   , "","NombreUsuario","Nombre Usuario","","","","",""),

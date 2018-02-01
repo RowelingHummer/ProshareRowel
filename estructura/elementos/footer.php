@@ -8,10 +8,10 @@ and open the template in the editor.
 <?php
 // put your code here
 ?>
-<footer class="w3-container w3-proshare-a-d3 w3-padding-64">
+<footer class="rowel-container rowel-wiquu-am-d3 rowel-padding-64">
 
 
-    <div class="container w3-proshare-a-d3 w3-padding-16 w3-center">
+    <div class="container rowel-wiquu-am-d3 rowel-padding-16 rowel-center">
         <a href="#" class="f fa fa-facebook"></a>
         <a href="#" class="f fa fa-twitter"></a>
         <a href="#" class="f fa fa-google"></a>
@@ -21,6 +21,6 @@ and open the template in the editor.
 
     </div>
 </footer>
-<footer class="w3-container w3-proshare-a-d5 w3-padding-32">
+<footer class="rowel-container rowel-wiquu-am-d5 rowel-padding-32">
     <p>Powered by <a href="http://rowel.co" target="_blank">ROWEL INGENIERÍA</a></p>
 </footer>

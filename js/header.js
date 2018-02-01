@@ -8,22 +8,22 @@
 // Accordion
 function myFunction(id) {
     var x = document.getElementById(id);
-    if (x.className.indexOf("w3-show") == -1) {
-        x.className += " w3-show";
-        x.previousElementSibling.className += " w3-theme-d1";
+    if (x.className.indexOf("rowel-show") == -1) {
+        x.className += " rowel-show";
+        x.previousElementSibling.className += " rowel-theme-d1";
     } else { 
-        x.className = x.className.replace("w3-show", "");
+        x.className = x.className.replace("rowel-show", "");
         x.previousElementSibling.className = 
-        x.previousElementSibling.className.replace(" w3-theme-d1", "");
+        x.previousElementSibling.className.replace(" rowel-theme-d1", "");
     }
 }
 
 // Used to toggle the menu on smaller screens when clicking on the menu button
 function openNav() {
     var x = document.getElementById("navDemo");
-    if (x.className.indexOf("w3-show") == -1) {
-        x.className += " w3-show";
+    if (x.className.indexOf("rowel-show") == -1) {
+        x.className += " rowel-show";
     } else { 
-        x.className = x.className.replace(" w3-show", "");
+        x.className = x.className.replace(" rowel-show", "");
     }
 }

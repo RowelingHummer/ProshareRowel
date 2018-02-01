@@ -17,7 +17,7 @@ class card {
     }
 
     protected function crearCard($contenido) {
-        $e = '<div class="w3-card w3-' . $this->esquinas . ' w3-' . $this->color . '">';
+        $e = '<div class="rowel-card rowel-' . $this->esquinas . ' rowel-' . $this->color . '">';
         $e .= "$contenido";
         $e .= '</div>';
         return $e;
@@ -44,7 +44,7 @@ class perfilCard extends card {
 
     public function mostrarPerfilCard() {
         $contenido = $this->agregarImagenUsuario();
-        $contenido .= '<div class="w3-container">';
+        $contenido .= '<div class="rowel-container">';
         $contenido .= $this->agregarProfesion();
         $contenido .= $this->agregarCiudad();
         $contenido .= $this->agregarCumpleaños();
@@ -55,10 +55,10 @@ class perfilCard extends card {
 
     private function agregarImagenUsuario() {
         if ($this->profesion != "") {
-            $e = '<div class="w3-display-container w3-hover-opacity" style="width:100%">
+            $e = '<div class="rowel-display-container rowel-hover-opacity" style="width:100%">
                         <img src="' . $this->urlImagen . '" alt="Avatar" style="width:100%">
-                        <div class="w3-display-middle w3-display-hover w3-xlarge">
-                            <button class="w3-button w3-black">' . $this->usuario . '</button>
+                        <div class="rowel-display-middle rowel-display-hover rowel-xlarge">
+                            <button class="rowel-button rowel-black">' . $this->usuario . '</button>
                         </div>
                   </div>';          
                     
@@ -68,21 +68,21 @@ class perfilCard extends card {
 
     private function agregarProfesion() {
         if ($this->profesion != "") {
-            $e = '<p><i class="fa fa-pencil fa-fw w3-padding w3-margin-right w3-text-theme"></i>' . $this->profesion . '</p>';
+            $e = '<p><i class="fa fa-pencil fa-fw rowel-padding rowel-margin-right rowel-text-theme"></i>' . $this->profesion . '</p>';
         }
         return $e;
     }
 
     private function agregarCiudad() {
         if ($this->ciudad != "") {
-            $e = '<p><i class="fa fa-home fa-fw w3-padding w3-margin-right w3-text-theme"></i>' . $this->ciudad . '</p>';
+            $e = '<p><i class="fa fa-home fa-fw rowel-padding rowel-margin-right rowel-text-theme"></i>' . $this->ciudad . '</p>';
         }
         return $e;
     }
 
     private function agregarCumpleaños() {
         if ($this->cumpleaños != "") {
-            $e = '<p><i class="fa fa-birthday-cake fa-fw w3-padding w3-margin-right w3-text-theme"></i>' . $this->cumpleaños . '</p>';
+            $e = '<p><i class="fa fa-birthday-cake fa-fw rowel-padding rowel-margin-right rowel-text-theme"></i>' . $this->cumpleaños . '</p>';
         }
         return $e;
     }

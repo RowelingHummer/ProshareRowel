@@ -38,7 +38,7 @@ class formulario {
      */
     protected function setFormulario($formulario) {
 
-        $valoresPredeterminadosFormulario = array("Mi Formulario", "w3-center ", "w3-container w3-white  w3-padding", "./action_page.php", "post","left");
+        $valoresPredeterminadosFormulario = array("Mi Formulario", "rowel-center ", "rowel-container rowel-white  rowel-padding", "./action_page.php", "post","left");
         for ($i = 0; $i < sizeof($valoresPredeterminadosFormulario); $i++) {
             if ($formulario[$i] !== "") {
                 $this->formulario[$i] = $formulario[$i];
@@ -55,7 +55,7 @@ class formulario {
      * @param string  $submit   array
      */
     protected function setSubmit($submit) {
-        $valoresPredeterminadosSubmit = array("Enviar", "w3-button w3-block w3-section w3-proshare-n w3-ripple w3-padding");
+        $valoresPredeterminadosSubmit = array("Enviar", "rowel-button rowel-block rowel-section rowel-wiquu-az rowel-ripple rowel-padding");
         for ($i = 0; $i < sizeof($valoresPredeterminadosSubmit); $i++) {
             if ($submit[$i] !== "") {
                 $this->submit[$i] = $submit[$i];
@@ -72,7 +72,7 @@ class formulario {
      * @param string  $camposFormulario   array
      */
     protected function setCamposFormulario($camposFormulario) {
-        $valoresPredeterminadosCamposFormulario = array("text", "", "w3-small w3-text-proshare-a", "entrada", "Entrada de texto", "w3-input w3-border w3-small ", "", "", "", "");
+        $valoresPredeterminadosCamposFormulario = array("text", "", "rowel-small rowel-text-wiquu-am", "entrada", "Entrada de texto", "rowel-input rowel-border rowel-small ", "", "", "", "");
         for ($i = 0; $i < sizeof($camposFormulario); $i++) {
             for ($j = 0; $j < sizeof($valoresPredeterminadosCamposFormulario); $j++) {
                 if ($camposFormulario[$i][$j] !== "") {
@@ -117,7 +117,7 @@ class formulario {
     }
 
     private function generarBotonAccion() {
-        $e = '<div class="w3-center">';
+        $e = '<div class="rowel-center">';
         $e .= '<button class="' . $this->submit[1] . '"><strong>' . $this->submit[0] . '</strong></button>';
         $e .= '</div>';
         return $e;
@@ -138,13 +138,13 @@ class formulario {
     private function ubicacionLabelCampo($posicionLabel, $label, $campo) {
         switch ($posicionLabel) {
             case "left":
-                $e = '<div class="w3-section"><div class="w3-row w3-container"><div class="w3-col l2 w3-right-align w3-margin-right">';
-                $e .= $label . '</div><div class="w3-col l9">';
+                $e = '<div class="rowel-section"><div class="rowel-row rowel-container"><div class="rowel-col l2 rowel-right-align rowel-margin-right">';
+                $e .= $label . '</div><div class="rowel-col l9">';
                 $e .= $campo . '</div></div></div>';
                 break;
             case "right":
-                $e = '<div class="w3-section"><div class="w3-row w3-container"><div class="w3-col l9 w3-right-align w3-margin-right">';
-                $e .= $campo . '</div><div class="w3-col l2">';
+                $e = '<div class="rowel-section"><div class="rowel-row rowel-container"><div class="rowel-col l9 rowel-right-align rowel-margin-right">';
+                $e .= $campo . '</div><div class="rowel-col l2">';
                 $e .= $label . '</div></div></div>';
                 break;
             case "top":
@@ -216,48 +216,3 @@ class formularioEditarPerfil extends formulario {
         return $e;
     }
 }
-?>
-<!--<!DOCTYPE html>
-
-
-<form action="/action_page.php" class="w3-container w3-white w3-text-proshare-n w3-margin">
-    <h2 class="w3-center">Contact Us</h2>
-
-    <div class="w3-row w3-section">
-        <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-user"></i></div>
-        <div class="w3-rest">
-            <input class="w3-input w3-border" name="first" type="text" placeholder="First Name">
-        </div>
-    </div>
-
-    <div class="w3-row w3-section">
-        <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-user"></i></div>
-        <div class="w3-rest">
-            <input class="w3-input w3-border" name="last" type="text" placeholder="Last Name">
-        </div>
-    </div>
-
-    <div class="w3-row w3-section">
-        <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-envelope-o"></i></div>
-        <div class="w3-rest">
-            <input class="w3-input w3-border" name="email" type="text" placeholder="Email">
-        </div>
-    </div>
-
-    <div class="w3-row w3-section">
-        <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-phone"></i></div>
-        <div class="w3-rest">
-            <input class="w3-input w3-border" name="phone" type="text" placeholder="Phone">
-        </div>
-    </div>
-
-    <div class="w3-row w3-section">
-        <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-pencil"></i></div>
-        <div class="w3-rest">
-            <input class="w3-input w3-border" name="message" type="text" placeholder="Message">
-        </div>
-    </div>
-
-    <button class="w3-button w3-block w3-section w3-blue w3-ripple w3-padding">Send</button>
-
-</form>-->

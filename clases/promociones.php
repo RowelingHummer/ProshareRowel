@@ -45,7 +45,7 @@ class promociones {
      * metodo publico que permite la visualizacion del objeto
      */
     public function mostrarPromocion() {
-        echo'<div id="' . $this->nombreCategoria . '" class="carousel slide w3-card-4" data-ride="carousel" data-interval="' . $this->time . '" data-pause="hover">';
+        echo'<div id="' . $this->nombreCategoria . '" class="carousel slide rowel-card-4" data-ride="carousel" data-interval="' . $this->time . '" data-pause="hover">';
         $this->indicadores();
         $this->envolturas();
         $this->controles();
@@ -83,15 +83,15 @@ class promociones {
                 echo'<div class="item">';
             }
             echo '<a href="'.$this->array_promociones[$i][4] .'">';
-            echo '  <div class="w3-proshare-a w3-text-proshare-n" >';
-            echo '       <div class="w3-display-container w3-hover-opacity" >';
+            echo '  <div class="rowel-wiquu-am rowel-text-wiquu-az" >';
+            echo '       <div class="rowel-display-container rowel-hover-opacity" >';
             echo '          <img src="' . $this->array_promociones[$i][0] . '" width="' . $this->width . '" height="' . $this->height . '">';
-            echo '          <div class="w3-display-topright ">';
-            echo '           <div class=" w3-panel"><div class="w3-padding w3-pale-red">' . $this->array_promociones[$i][2] . '</div><div class="w3-padding w3-pale-green">' . $this->array_promociones[$i][3] . '</div></div>';
+            echo '          <div class="rowel-display-topright ">';
+            echo '           <div class=" rowel-panel"><div class="rowel-padding rowel-pale-red">' . $this->array_promociones[$i][2] . '</div><div class="rowel-padding rowel-pale-green">' . $this->array_promociones[$i][3] . '</div></div>';
             echo '          </div>';
             echo '       </div>';
-            echo '       <div class="w3-row w3-center" >';
-            echo '           <div class="w3-panel" style="height:80px"><strong>' . $this->array_promociones[$i][1] . '</strong></div>';
+            echo '       <div class="rowel-row rowel-center" >';
+            echo '           <div class="rowel-panel" style="height:80px"><strong>' . $this->array_promociones[$i][1] . '</strong></div>';
             echo '        </div>';           
             echo '  </div>';
             echo '</a>';
